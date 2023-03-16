@@ -1,3 +1,3 @@
 import streamlit
 
-streamlist.title('Zack has created an app')
+streamlit.title('Zack has created an app')
