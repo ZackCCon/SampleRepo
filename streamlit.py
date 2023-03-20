@@ -35,8 +35,6 @@ try:
 except URLError as e:
   streamlit.error()
 
-streamlit.stop()
-
 # Snowflake Steps Begin Below
 
 streamlit.header("In the Fruit Load List, We Have:")
@@ -52,11 +50,8 @@ if streamlit.button("Get Fruit Load List"):
   my_data_rows = get_fruitload_list()
   streamlit.dataframe(my_data_rows)
 
-  
 add_chosen_fruit = streamlit.text_input('What additional fruit would you like to add?','Jackfruit')
 streamlit.write('Thanks for adding ', add_chosen_fruit, '!')
-
-
 
 # Insert data to Snowflake
 # my_cur.execute("insert into PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST values ('from streamlit')
